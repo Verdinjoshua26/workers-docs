@@ -10,11 +10,14 @@
     "start-hugo": "hugo -D server",
     "test": "ava workers-site/test/index.js --verbose",
     "start": "hugo && wrangler preview --watch -e staging",
-    "publish": "npm run build && wrangler publish -e"
+    "publish": "npm run build && wrangler publish -e",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "gulp": "^4.0.0",
-    "@cloudflare/hugo-cloudflare-docs": "1.0.4"
+    "@cloudflare/hugo-cloudflare-docs": "1.0.4",
+    "@snyk/protect": "latest"
   },
   "ava": {
     "require": [
@@ -23,5 +26,6 @@
   },
   "devDependencies": {
     "ava": "^2.4.0"
-  }
+  },
+  "snyk": true
 }
