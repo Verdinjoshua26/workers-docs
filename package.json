@@ -13,7 +13,7 @@
     "publish": "npm run build && wrangler publish -e"
   },
   "dependencies": {
-    "gulp": "^4.0.0",
+    "gulp": "^5.0.0",
     "@cloudflare/hugo-cloudflare-docs": "1.0.4"
   },
   "ava": {
